@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Technology | Inside a Sparq battery energy storage system</title>
+    <meta name="description" content="How a Battery Energy Storage System (BESS) works, battery modules, BMS, PCS, HVAC, fire suppression, and the EMS software that ties it all together." />
+    <meta name="theme-color" content="#faf9f9" />
+    <link rel="icon" href="/sparq-preview/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://www.sparqtechnology.com/technology" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Technology | Inside a Sparq battery energy storage system" />
+    <meta property="og:description" content="How a Battery Energy Storage System (BESS) works, battery modules, BMS, PCS, HVAC, fire suppression, and the EMS software that ties it all together." />
+    <meta property="og:image" content="/sparq-preview/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" href="/sparq-preview/fonts/sora-200_700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/sparq-preview/fonts/figtree-300_700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    
+    <script>
+      document.documentElement.classList.add('js');
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.classList.add('motion'); setTimeout(function () { if (!document.documentElement.classList.contains('ready')) document.documentElement.classList.add('failsafe'); }, 3500); }
+    </script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sparqtechnology.com/"}, {"@type": "ListItem", "position": 2, "name": "Technology", "item": "https://www.sparqtechnology.com/technology/"}]}</script>
+    <script type="module" crossorigin src="/sparq-preview/assets/ending-TfZyd4US.js"></script>
+    <script type="module" crossorigin src="/sparq-preview/assets/inner-CHYCgGKw.js"></script>
+    <link rel="stylesheet" crossorigin href="/sparq-preview/assets/ending-Gx9FjCf8.css">
+    <link rel="stylesheet" crossorigin href="/sparq-preview/assets/inner-Bbiorlsr.css">
+  </head>
+  <body class="inner" data-page="technology">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="hdr" id="hdr">
+      <a class="hdr__brand" href="/sparq-preview/" aria-label="Sparq Technology, home" data-logo="wordmark"></a>
+      <nav class="hdr__nav" aria-label="Primary">
+        <a href="/sparq-preview/about/">About</a>
+        <div class="hdr__drop">
+          <button class="hdr__dropbtn" type="button" aria-expanded="false" aria-controls="mega">Solutions<i class="hdr__caret" aria-hidden="true"></i></button>
+        <div class="mega" id="mega" hidden>
+          <div class="mega__col">
+            <p class="mega__h">Packages</p>
+            <ul class="mega__list"><li class="mega__group"><p class="mega__g">Plan &amp; Optimise</p><a href="/sparq-preview/packages/analyzer/">Analyzer</a><a href="/sparq-preview/packages/optimizer/">Optimizer</a></li><li class="mega__group"><p class="mega__g">Store &amp; Save</p><a href="/sparq-preview/packages/controller/">Controller</a><a href="/sparq-preview/packages/capitalizer/">Capitalizer</a></li><li class="mega__group"><p class="mega__g">Charge</p><a href="/sparq-preview/packages/supercharger/">Supercharger</a><a href="/sparq-preview/packages/mobilecharger/">Mobilecharger</a></li><li class="mega__group"><p class="mega__g">Protect &amp; Endure</p><a href="/sparq-preview/packages/stabilizer/">Stabilizer</a><a href="/sparq-preview/packages/fortifier/">Fortifier</a></li></ul>
+            <a class="mega__all" href="/sparq-preview/packages/">All packages <i aria-hidden="true">→</i></a>
+          </div>
+          <div class="mega__col mega__col--ind">
+            <p class="mega__h">Industries</p>
+            <ul class="mega__list"><li><a href="/sparq-preview/industries/commercial-industrial/">Commercial &amp; industrial (C&amp;I)</a></li><li><a href="/sparq-preview/industries/municipalities-cities/">Municipalities &amp; cities</a></li><li><a href="/sparq-preview/industries/wind-solar-farm-operators/">Wind &amp; solar farm operators</a></li><li><a href="/sparq-preview/industries/agriculture/">Agriculture</a></li><li><a href="/sparq-preview/industries/ev-charging-providers-operators/">EV charging providers &amp; operators</a></li><li><a href="/sparq-preview/industries/transport-logistics/">Transport &amp; logistics</a></li><li><a href="/sparq-preview/industries/ports-marine/">Ports &amp; Marine</a></li><li><a href="/sparq-preview/industries/construction-off-grid-worksites/">Construction &amp; off-grid worksites</a></li><li><a href="/sparq-preview/industries/real-estate/">Real Estate &amp; Property</a></li><li><a href="/sparq-preview/industries/data-centers/">Data centers</a></li><li><a href="/sparq-preview/industries/large-events/">Large Events</a></li></ul>
+            <a class="mega__all" href="/sparq-preview/industries/">All industries <i aria-hidden="true">→</i></a>
+          </div>
+          <div class="mega__feat">
+            <a class="mega__card" href="/sparq-preview/solutions/">
+              <span class="mega__img"><img src="/sparq-preview/img/l/solutions-hero-solutions-640.webp" alt="" width="640" height="427" fetchpriority="low" decoding="async" /></span>
+              <span class="mega__k">What a BESS + EMS can do</span>
+              <span class="mega__t">Solutions overview <i aria-hidden="true">→</i></span>
+            </a>
+            <div class="mega__finder">
+              <span class="mega__k">Not sure which package fits?</span>
+              <a class="mega__out" href="https://www.sparqtechnology.com/package-finder" rel="noopener">Take the Package Finder <i aria-hidden="true">↗</i></a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <a href="/sparq-preview/technology/" aria-current="page">Technology</a>
+        <a href="/sparq-preview/references/">References</a>
+        <a href="/sparq-preview/partners/">Partners</a>
+        <a href="/sparq-preview/news/">News</a>
+      </nav>
+      <a class="hdr__cta" href="/sparq-preview/contact/"><span>Let us talk</span><i aria-hidden="true">→</i></a>
+      <button class="hdr__menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    </header>
+    <nav class="menu" id="menu" aria-label="Menu" hidden>
+      <div class="menu__list">
+        <a href="/sparq-preview/about/">About</a>
+        <a href="/sparq-preview/solutions/">Solutions</a>
+        <a href="/sparq-preview/packages/">Packages</a>
+        <a href="/sparq-preview/industries/">Industries</a>
+        <a href="/sparq-preview/technology/" aria-current="page">Technology</a>
+        <a href="/sparq-preview/references/">References</a>
+        <a href="/sparq-preview/partners/">Partners</a>
+        <a href="/sparq-preview/news/">News</a>
+        <a href="/sparq-preview/contact/">Contact</a>
+      </div>
+      <div class="menu__foot">
+        <a href="mailto:info@sparqtechnology.com">info@sparqtechnology.com</a>
+        <a href="tel:+46317991600">+46 (0)31-799 16 00</a>
+      </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section class="tech-hero" id="top" aria-labelledby="h-page">
+        <svg class="flowline-x pghero__flow" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <defs><linearGradient id="flpghero__flow" x1="0" x2="1"><stop offset="0" stop-color="#74b0b5"/><stop offset="0.62" stop-color="#9fc6c4"/><stop offset="1" stop-color="#f6a318"/></linearGradient></defs>
+        <g fill="none" stroke="url(#flpghero__flow)" stroke-width="1" vector-effect="non-scaling-stroke"><path d="M-40 210 C 260 138, 520 300, 820 186 S 1300 114, 1640 150" style="--i:0"/><path d="M-40 217 C 260 137, 520 318, 820 190 S 1300 110, 1640 157" style="--i:1"/><path d="M-40 224 C 260 135, 520 335, 820 194 S 1300 106, 1640 164" style="--i:2"/><path d="M-40 231 C 260 134, 520 352, 820 199 S 1300 101, 1640 171" style="--i:3"/><path d="M-40 238 C 260 132, 520 370, 820 203 S 1300 97, 1640 178" style="--i:4"/><path d="M-40 245 C 260 131, 520 388, 820 207 S 1300 93, 1640 185" style="--i:5"/><path d="M-40 252 C 260 130, 520 405, 820 211 S 1300 89, 1640 192" style="--i:6"/><path d="M-40 259 C 260 128, 520 422, 820 215 S 1300 85, 1640 199" style="--i:7"/><path d="M-40 266 C 260 127, 520 440, 820 220 S 1300 80, 1640 206" style="--i:8"/><path d="M-40 273 C 260 125, 520 458, 820 224 S 1300 76, 1640 213" style="--i:9"/><path d="M-40 280 C 260 124, 520 475, 820 228 S 1300 72, 1640 220" style="--i:10"/><path d="M-40 287 C 260 123, 520 492, 820 232 S 1300 68, 1640 227" style="--i:11"/><path d="M-40 294 C 260 121, 520 510, 820 236 S 1300 64, 1640 234" style="--i:12"/><path d="M-40 301 C 260 120, 520 528, 820 241 S 1300 59, 1640 241" style="--i:13"/><path d="M-40 308 C 260 118, 520 545, 820 245 S 1300 55, 1640 248" style="--i:14"/><path d="M-40 315 C 260 117, 520 562, 820 249 S 1300 51, 1640 255" style="--i:15"/><path d="M-40 322 C 260 116, 520 580, 820 253 S 1300 47, 1640 262" style="--i:16"/><path d="M-40 329 C 260 114, 520 598, 820 257 S 1300 43, 1640 269" style="--i:17"/></g></svg>
+        <div class="wrap tech-hero__grid">
+          <div class="tech-hero__text">
+            <p class="kicker" data-rise>Technology</p>
+            <h1 id="h-page" class="pghero__title pghero__title--long" data-split>The technology behind our battery energy storage systems.</h1>
+            <a class="arrow-link" href="#what" data-rise>See what is inside <i aria-hidden="true">↓</i></a>
+          </div>
+          <figure class="tech-hero__video" data-reveal><div class="yt " data-yt="anUm1_MKPuY" data-title="What is a Battery Energy Storage System (BESS)?">
+            <img src="/sparq-preview/img/l/solutions-hero-solutions-1400.webp" srcset="/sparq-preview/img/l/solutions-hero-solutions-640.webp 640w, /sparq-preview/img/l/solutions-hero-solutions-1400.webp 1400w, /sparq-preview/img/l/solutions-hero-solutions-1800.webp 1800w" sizes="(min-width: 900px) 50vw, 100vw" alt="" width="2048" height="1365" loading="lazy" decoding="async" />
+            <button class="yt__play" type="button"><span class="yt__icon" aria-hidden="true"></span><span class="yt__label">Play video<span class="sr-only">: What is a Battery Energy Storage System (BESS)?</span></span></button>
+          </div></figure>
+        </div>
+      </section>
+
+      <section class="tour" id="what" aria-labelledby="h-what">
+        <div class="wrap tour__intro">
+          <p class="kicker" data-rise>The basics</p>
+          <h2 id="h-what" data-split>What is a BESS?</h2>
+          <p class="tour__lede" data-rise>A Battery Energy Storage System (BESS) stores electricity so it can be used exactly when it's needed most, smoothing out demand peaks, storing excess solar or wind power, and keeping critical operations running when the grid can't. A modern, containerized BESS brings several core components together as one system:</p>
+        </div>
+        <div class="wrap tour__grid">
+          <div class="tour__chapters"><article class="tour__ch" data-part="modules" id="part-battery-modules">
+              <p class="tour__group"><b>Hardware</b> The heart of the energy system</p>
+              <span class="tour__n" aria-hidden="true">01 / 06</span>
+              <h3>Battery modules</h3>
+              <p>The cells, grouped into racks, that actually store the energy.</p>
+            </article><article class="tour__ch" data-part="pcs" id="part-power-conversion-system-pcs">
+              
+              <span class="tour__n" aria-hidden="true">02 / 06</span>
+              <h3>Power Conversion System (PCS)</h3>
+              <p>The bidirectional inverter that converts the battery's stored DC energy into grid-usable AC power, and back again when charging. It also manages power quality and keeps the system in sync with the grid's voltage and frequency, working together with the EMS to control exactly how much power flows in or out at any given moment.</p>
+            </article><article class="tour__ch" data-part="hvac" id="part-hvac-thermal-management">
+              
+              <span class="tour__n" aria-hidden="true">03 / 06</span>
+              <h3>HVAC / thermal management</h3>
+              <p>Keeps the battery modules within their optimal temperature range, whatever the weather outside.</p>
+            </article><article class="tour__ch" data-part="fire" id="part-fire-suppression-system">
+              
+              <span class="tour__n" aria-hidden="true">04 / 06</span>
+              <h3>Fire suppression system</h3>
+              <p>Automatic detection and suppression built into the enclosure to protect the system and everything around it; Sparq's own systems use PFAS-free fire suppression technology.</p>
+            </article><article class="tour__ch" data-part="bms" id="part-battery-management-system-bms">
+              <p class="tour__group"><b>Software</b> The brain of the energy system</p>
+              <span class="tour__n" aria-hidden="true">05 / 06</span>
+              <h3>Battery Management System (BMS)</h3>
+              <p>Continuously monitors each module's temperature, voltage and state of charge to keep the batteries safe and performing well over their lifetime.</p>
+            </article><article class="tour__ch" data-part="ems" id="part-energy-management-system-ems">
+              
+              <span class="tour__n" aria-hidden="true">06 / 06</span>
+              <h3>Energy Management System (EMS)</h3>
+              <p>The software layer that decides when to charge, discharge, or provide grid services, optimizing for cost and revenue.</p>
+            </article></div>
+          <div class="tour__stage" data-stage="tour">
+            <canvas class="tour__canvas" aria-hidden="true"></canvas>
+            <ol class="tour__dots" aria-hidden="true"><li data-i="0"></li><li data-i="1"></li><li data-i="2"></li><li data-i="3"></li><li data-i="4"></li><li data-i="5"></li></ol>
+            <div class="explore__still"><img src="/sparq-preview/img/l/references-package-controller-812.webp" srcset="/sparq-preview/img/l/references-package-controller-812.webp 812w" sizes="(min-width: 900px) 50vw, 100vw" alt="A Sparq battery container" width="812" height="456" loading="lazy" decoding="async" /></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gloss-band" aria-labelledby="h-gloss">
+        <div class="gloss-band__marquee" aria-hidden="true"><div class="gloss-band__track"><span>BESS</span><span>BMS</span><span>PCS</span><span>HVAC</span><span>EMS</span><span>SCADA</span><span>PV</span><span>EV</span><span>LFP</span><span>NMC</span><span>SoC</span><span>SoH</span><span>DoD</span><span>C-rate</span><span>RTE</span><span>THD</span><span>kW</span><span>MW</span><span>kWh</span><span>MWh</span><span>kVA</span><span>kVAr</span><span>Ancillary services</span><span>FCR</span><span>BESS</span><span>BMS</span><span>PCS</span><span>HVAC</span><span>EMS</span><span>SCADA</span><span>PV</span><span>EV</span><span>LFP</span><span>NMC</span><span>SoC</span><span>SoH</span><span>DoD</span><span>C-rate</span><span>RTE</span><span>THD</span><span>kW</span><span>MW</span><span>kWh</span><span>MWh</span><span>kVA</span><span>kVAr</span><span>Ancillary services</span><span>FCR</span></div></div>
+        <div class="wrap gloss-band__inner">
+          <p class="finderband__new" data-rise>New</p>
+          <div>
+            <h2 id="h-gloss" data-split>Don't know your FRR from your PCS?</h2>
+            <p data-rise>Our glossary breaks down the 51 abbreviations you'll run into most often across BESS, EMS and the wider energy market, in plain language, with an example for each.</p>
+          </div>
+          <a class="btn btn--amber" href="/sparq-preview/glossary/" data-rise><span>Explore the glossary</span><i aria-hidden="true">→</i></a>
+        </div>
+      </section>
+
+      <section class="cert band" aria-labelledby="h-cert">
+        <div class="wrap cert__grid">
+          <div>
+            <p class="kicker" data-rise>Certified & compliant</p>
+            <h2 id="h-cert" data-split>Certification you can verify</h2>
+          </div>
+          <div class="cert__text">
+            <p data-rise>Every Sparq battery energy storage system is engineered and manufactured under a certified quality and safety framework, audited against recognized international standards rather than tested once and left alone.</p>
+            <p data-rise>Sparq holds ISO 9001 (quality management), ISO 14001 (environmental management) and ISO 45001 (occupational health &amp; safety) certification, alongside EN54 fire safety compliance and CE marking for the European market.</p>
+            <ul class="cert__marks" data-rise><li>ISO 9001</li><li>ISO 14001</li><li>ISO 45001</li><li>EN54</li><li>CE</li></ul>
+          </div>
+          <figure class="cert__img" data-rise><img src="/sparq-preview/img/l/technology-is-certificates-740.webp" srcset="/sparq-preview/img/l/technology-is-certificates-740.webp 740w" sizes="(min-width: 900px) 40vw, 100vw" alt="ISO 9001, ISO 14001 and ISO 45001 certification badges" width="740" height="260" loading="lazy" decoding="async" /></figure>
+        </div>
+      </section>
+
+      <section class="cta" aria-labelledby="h-cta">
+        <svg class="flowline-x cta__flow" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <defs><linearGradient id="flcta__flow" x1="0" x2="1"><stop offset="0" stop-color="#74b0b5"/><stop offset="0.62" stop-color="#9fc6c4"/><stop offset="1" stop-color="#f6a318"/></linearGradient></defs>
+        <g fill="none" stroke="url(#flcta__flow)" stroke-width="1" vector-effect="non-scaling-stroke"><path d="M-40 210 C 260 138, 520 300, 820 186 S 1300 114, 1640 150" style="--i:0"/><path d="M-40 217 C 260 137, 520 318, 820 190 S 1300 110, 1640 157" style="--i:1"/><path d="M-40 224 C 260 135, 520 335, 820 194 S 1300 106, 1640 164" style="--i:2"/><path d="M-40 231 C 260 134, 520 352, 820 199 S 1300 101, 1640 171" style="--i:3"/><path d="M-40 238 C 260 132, 520 370, 820 203 S 1300 97, 1640 178" style="--i:4"/><path d="M-40 245 C 260 131, 520 388, 820 207 S 1300 93, 1640 185" style="--i:5"/><path d="M-40 252 C 260 130, 520 405, 820 211 S 1300 89, 1640 192" style="--i:6"/><path d="M-40 259 C 260 128, 520 422, 820 215 S 1300 85, 1640 199" style="--i:7"/><path d="M-40 266 C 260 127, 520 440, 820 220 S 1300 80, 1640 206" style="--i:8"/><path d="M-40 273 C 260 125, 520 458, 820 224 S 1300 76, 1640 213" style="--i:9"/><path d="M-40 280 C 260 124, 520 475, 820 228 S 1300 72, 1640 220" style="--i:10"/><path d="M-40 287 C 260 123, 520 492, 820 232 S 1300 68, 1640 227" style="--i:11"/><path d="M-40 294 C 260 121, 520 510, 820 236 S 1300 64, 1640 234" style="--i:12"/><path d="M-40 301 C 260 120, 520 528, 820 241 S 1300 59, 1640 241" style="--i:13"/><path d="M-40 308 C 260 118, 520 545, 820 245 S 1300 55, 1640 248" style="--i:14"/><path d="M-40 315 C 260 117, 520 562, 820 249 S 1300 51, 1640 255" style="--i:15"/><path d="M-40 322 C 260 116, 520 580, 820 253 S 1300 47, 1640 262" style="--i:16"/><path d="M-40 329 C 260 114, 520 598, 820 257 S 1300 43, 1640 269" style="--i:17"/></g></svg>
+        <div class="wrap cta__inner">
+          <p class="kicker kicker--light" data-rise>Get in touch</p>
+          <h2 id="h-cta" data-split>Want to see how this works for your site?</h2>
+          
+          <div class="cta__row" data-rise>
+            <a class="btn btn--amber" href="/sparq-preview/contact/"><span>Contact Sparq</span><i aria-hidden="true">→</i></a>
+            <a class="cta__link" href="mailto:info@sparqtechnology.com">info@sparqtechnology.com</a>
+            <a class="cta__link" href="tel:+46317991600">+46 (0)31-799 16 00</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="ftr">
+      <video class="ftr__video" muted loop playsinline preload="none" poster="/sparq-preview/img/footer-poster.webp" aria-hidden="true" tabindex="-1"></video>
+      <div class="ftr__inner wrap">
+        <div class="ftr__top">
+          <div class="ftr__about">
+            <p>Battery energy optimization and storage solutions for commercial and industrial applications. Made in EU.</p>
+            <p class="ftr__certs">ISO 9001 · ISO 14001 · ISO 45001 · EN54 · CE</p>
+          </div>
+          <nav class="ftr__nav" aria-label="Footer">
+            <div>
+              <p class="ftr__h">Company</p>
+              <a href="/sparq-preview/about/">About us</a>
+              <a href="/sparq-preview/references/">References</a>
+              <a href="/sparq-preview/partners/">Partners</a>
+              <a href="/sparq-preview/news/">News</a>
+            </div>
+            <div>
+              <p class="ftr__h">Offer</p>
+              <a href="/sparq-preview/solutions/">Solutions</a>
+              <a href="/sparq-preview/technology/" aria-current="page">Technology</a>
+              <a href="/sparq-preview/packages/">Packages</a>
+              <a href="/sparq-preview/industries/">Industries</a>
+              <a href="/sparq-preview/glossary/">Glossary</a>
+            </div>
+            <div>
+              <p class="ftr__h">Contact</p>
+              <a href="mailto:info@sparqtechnology.com">info@sparqtechnology.com</a>
+              <a href="tel:+46317991600">+46 (0)31-799 16 00</a>
+              <a href="https://www.linkedin.com/company/sparq-technology/" rel="noopener">LinkedIn</a>
+              <a href="https://www.youtube.com/@SparqTechnology" rel="noopener">YouTube</a>
+            </div>
+          </nav>
+        </div>
+        <div class="ftr__name" data-logo="wordmark" aria-label="Sparq" role="img"></div>
+        <div class="ftr__bottom">
+          <p class="ftr__legal">© 2022 to 2026 Sparq Technology · Part of the CEBON Group · <a href="/sparq-preview/privacy/">Privacy policy</a></p>
+          <a class="ftr__up" href="#top">Back to top <i aria-hidden="true">↑</i></a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="motion-toggle" type="button" aria-pressed="false" id="motionToggle">Pause motion</button>
+  </body>
+</html>

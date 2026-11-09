@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sparq Technology | Battery energy storage and energy optimization</title>
+    <meta name="description" content="Sparq builds battery energy storage systems and the energy management software that runs them, for businesses across Europe. Part of CEBON Group, Gothenburg." />
+    <meta name="theme-color" content="#faf9f9" />
+    <link rel="icon" href="/sparq-preview/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://www.sparqtechnology.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sparq Technology | We ignite tomorrow" />
+    <meta property="og:description" content="Battery energy storage systems and the software that runs them. Part of CEBON Group, Gothenburg." />
+    <meta property="og:image" content="/sparq-preview/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" href="/sparq-preview/fonts/sora-200_700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/sparq-preview/fonts/figtree-300_700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      document.documentElement.classList.add('js');
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.classList.add('motion'); setTimeout(function () { if (!document.documentElement.classList.contains('ready')) document.documentElement.classList.add('failsafe'); }, 3500); }
+    </script>
+    <script type="module" crossorigin src="/sparq-preview/assets/main-F48zin6k.js"></script>
+    <link rel="modulepreload" crossorigin href="/sparq-preview/assets/ending-TfZyd4US.js">
+    <link rel="modulepreload" crossorigin href="/sparq-preview/assets/three.module-w3g3AgrY.js">
+    <link rel="modulepreload" crossorigin href="/sparq-preview/assets/bess-CstlaMzR.js">
+    <link rel="modulepreload" crossorigin href="/sparq-preview/assets/europe-D78Bx6kQ.js">
+    <link rel="stylesheet" crossorigin href="/sparq-preview/assets/ending-Gx9FjCf8.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <canvas id="stage" aria-hidden="true"></canvas>
+    <div class="intro" id="intro" aria-hidden="true">
+      <div class="intro__mark" data-logo="icon"></div>
+      <p class="intro__count"><span id="introPct">0</span>%</p>
+      <div class="intro__bar"><span id="introBar"></span></div>
+    </div>
+    <button class="inspect-hint" type="button" id="inspectHint"><span class="inspect-hint__dot" aria-hidden="true"></span>Look inside the battery</button>
+    <button class="inspect-close" type="button" id="inspectClose" hidden><span>Close</span><i aria-hidden="true">×</i></button>
+    <p class="inspect-tip" aria-live="polite">Drag to turn it · Click a part to go inside · Esc to close</p>
+    <button class="inspect-enter" type="button" id="inspectEnter" hidden><span>Step inside</span><i aria-hidden="true">→</i></button>
+    <aside class="part-card" id="partCard" hidden aria-labelledby="partTitle">
+      <p class="part-card__kicker" id="partKicker"></p>
+      <h2 class="part-card__title" id="partTitle" tabindex="-1"></h2>
+      <p class="part-card__body" id="partBody"></p>
+      <ul class="part-card__facts" id="partFacts"></ul>
+      <div class="part-card__nav">
+        <button type="button" id="partPrev" aria-label="Previous part"><i aria-hidden="true">←</i></button>
+        <button type="button" id="partBack">Overview</button>
+        <button type="button" id="partNext" aria-label="Next part"><i aria-hidden="true">→</i></button>
+      </div>
+    </aside>
+    <ol class="inspect-parts" id="inspectParts" aria-label="Parts inside the battery"></ol>
+    <nav class="rail" id="rail" aria-label="Story chapters">
+      <a href="#top" data-ch="0"><span>The box</span></a>
+      <a href="#store" data-ch="1"><span>Charge</span></a>
+      <a href="#inside" data-ch="2"><span>Inside</span></a>
+      <a href="#flow" data-ch="3"><span>On site</span></a>
+    </nav>
+    <div class="readouts" id="readouts" aria-hidden="true"></div>
+    <header class="hdr" id="hdr">
+      <a class="hdr__brand" href="#top" aria-label="Sparq Technology, back to top" data-logo="wordmark"></a>
+      <nav class="hdr__nav" aria-label="Primary">
+        <a href="/sparq-preview/about/">About</a>
+        <div class="hdr__drop">
+          <button class="hdr__dropbtn" type="button" aria-expanded="false" aria-controls="mega" data-spy="flow packages">Solutions<i class="hdr__caret" aria-hidden="true"></i></button>
+        <div class="mega" id="mega" hidden>
+          <div class="mega__col">
+            <p class="mega__h">Packages</p>
+            <ul class="mega__list"><li class="mega__group"><p class="mega__g">Plan &amp; Optimise</p><a href="/sparq-preview/packages/analyzer/">Analyzer</a><a href="/sparq-preview/packages/optimizer/">Optimizer</a></li><li class="mega__group"><p class="mega__g">Store &amp; Save</p><a href="/sparq-preview/packages/controller/">Controller</a><a href="/sparq-preview/packages/capitalizer/">Capitalizer</a></li><li class="mega__group"><p class="mega__g">Charge</p><a href="/sparq-preview/packages/supercharger/">Supercharger</a><a href="/sparq-preview/packages/mobilecharger/">Mobilecharger</a></li><li class="mega__group"><p class="mega__g">Protect &amp; Endure</p><a href="/sparq-preview/packages/stabilizer/">Stabilizer</a><a href="/sparq-preview/packages/fortifier/">Fortifier</a></li></ul>
+            <a class="mega__all" href="/sparq-preview/packages/">All packages <i aria-hidden="true">→</i></a>
+          </div>
+          <div class="mega__col mega__col--ind">
+            <p class="mega__h">Industries</p>
+            <ul class="mega__list"><li><a href="/sparq-preview/industries/commercial-industrial/">Commercial &amp; industrial (C&amp;I)</a></li><li><a href="/sparq-preview/industries/municipalities-cities/">Municipalities &amp; cities</a></li><li><a href="/sparq-preview/industries/wind-solar-farm-operators/">Wind &amp; solar farm operators</a></li><li><a href="/sparq-preview/industries/agriculture/">Agriculture</a></li><li><a href="/sparq-preview/industries/ev-charging-providers-operators/">EV charging providers &amp; operators</a></li><li><a href="/sparq-preview/industries/transport-logistics/">Transport &amp; logistics</a></li><li><a href="/sparq-preview/industries/ports-marine/">Ports &amp; Marine</a></li><li><a href="/sparq-preview/industries/construction-off-grid-worksites/">Construction &amp; off-grid worksites</a></li><li><a href="/sparq-preview/industries/real-estate/">Real Estate &amp; Property</a></li><li><a href="/sparq-preview/industries/data-centers/">Data centers</a></li><li><a href="/sparq-preview/industries/large-events/">Large Events</a></li></ul>
+            <a class="mega__all" href="/sparq-preview/industries/">All industries <i aria-hidden="true">→</i></a>
+          </div>
+          <div class="mega__feat">
+            <a class="mega__card" href="/sparq-preview/solutions/">
+              <span class="mega__img"><img src="/sparq-preview/img/l/solutions-hero-solutions-640.webp" alt="" width="640" height="427" fetchpriority="low" decoding="async" /></span>
+              <span class="mega__k">What a BESS + EMS can do</span>
+              <span class="mega__t">Solutions overview <i aria-hidden="true">→</i></span>
+            </a>
+            <div class="mega__finder">
+              <span class="mega__k">Not sure which package fits?</span>
+              <a class="mega__out" href="https://www.sparqtechnology.com/package-finder" rel="noopener">Take the Package Finder <i aria-hidden="true">↗</i></a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <a href="/sparq-preview/technology/" data-spy="inside">Technology</a>
+        <a href="/sparq-preview/references/" data-spy="proof">References</a>
+        <a href="/sparq-preview/partners/">Partners</a>
+        <a href="/sparq-preview/news/">News</a>
+      </nav>
+      <a class="hdr__cta" href="/sparq-preview/contact/"><span>Let us talk</span><i aria-hidden="true">→</i></a>
+      <button class="hdr__menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    </header>
+    <nav class="menu" id="menu" aria-label="Menu" hidden>
+      <div class="menu__list">
+        <a href="/sparq-preview/about/">About</a>
+        <a href="/sparq-preview/solutions/">Solutions</a>
+        <a href="/sparq-preview/packages/">Packages</a>
+        <a href="/sparq-preview/industries/">Industries</a>
+        <a href="/sparq-preview/technology/">Technology</a>
+        <a href="/sparq-preview/references/">References</a>
+        <a href="/sparq-preview/partners/">Partners</a>
+        <a href="/sparq-preview/news/">News</a>
+        <a href="/sparq-preview/contact/">Contact</a>
+      </div>
+      <div class="menu__foot">
+        <a href="mailto:info@sparqtechnology.com">info@sparqtechnology.com</a>
+        <a href="tel:+46317991600">+46 (0)31-799 16 00</a>
+      </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <div class="story" id="story">
+        <!-- 0. hero -->
+        <section class="ch ch--hero" id="top" aria-labelledby="h-hero">
+          <div class="ch__text">
+            <h1 id="h-hero" class="hero__title" data-split>We ignite tomorrow.</h1>
+            <p class="hero__lede" data-rise>
+              Battery energy storage systems and the energy management software that runs them, for businesses across
+              Europe. Standalone or fully integrated.
+            </p>
+            <div class="hero__ctas" data-rise>
+              <a class="btn btn--amber" href="https://www.sparqtechnology.com/package-finder"><span>Find your package</span><i aria-hidden="true">→</i></a>
+              <a class="btn btn--ghost" href="#store"><span>Look inside</span><i aria-hidden="true">↓</i></a>
+            </div>
+          </div>
+          <ul class="hero__facts" aria-label="Sparq in short" data-rise>
+            <li><b>Made in EU</b>Hardware and software developed in Europe</li>
+            <li><b>Certified</b>ISO 9001, 14001 and 45001, EN54, CE</li>
+            <li><b>Safe by design</b>PFAS-free fire suppression</li>
+            <li><b>40+ years</b>Part of CEBON Group, Gothenburg</li>
+          </ul>
+        </section>
+
+        <!-- 1. store -->
+        <section class="ch" id="store" aria-labelledby="h-store">
+          <div class="ch__text">
+            <h2 id="h-store" data-split>Charge when it is cheap. Deliver when it counts.</h2>
+            <p data-rise>
+              Electricity prices swing, grids hit their limits and power goes out. A Sparq battery stores energy from the
+              grid, the sun and the wind, and gives it back exactly when your site needs it.
+            </p>
+            <div class="meter" data-rise aria-hidden="true">
+              <div class="meter__row"><span>State of charge</span><strong><b id="socPct">35</b>%</strong></div>
+              <div class="meter__track"><span id="socFill"></span></div>
+              <p class="meter__note">Live from the model on this page, not a customer site.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. inside -->
+        <section class="ch" id="inside" aria-labelledby="h-inside">
+          <div class="ch__text">
+            <h2 id="h-inside" data-split>Everything inside, built in Europe.</h2>
+            <p data-rise>Hardware and software developed in Europe, configured for each customer.</p>
+            <ul class="certs" data-rise aria-label="Certifications">
+              <li>ISO 9001</li><li>ISO 14001</li><li>ISO 45001</li><li>EN54</li><li>CE</li>
+            </ul>
+            <ol class="parts" data-rise>
+              <li><b>Battery modules</b> Cells grouped into racks that store the energy.</li>
+              <li><b>Power conversion system</b> A bidirectional inverter from DC to grid-ready AC and back.</li>
+              <li><b>HVAC</b> Keeps every module in its best temperature range.</li>
+              <li><b>Fire suppression</b> Automatic detection and PFAS-free suppression.</li>
+              <li><b>BMS and EMS</b> Watch every module and decide when to charge, discharge or serve the grid.</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- 3. flow -->
+        <section class="ch" id="flow" aria-labelledby="h-flow">
+          <div class="ch__text">
+            <h2 id="h-flow" data-split>One box. Four jobs.</h2>
+            <div class="modes" role="group" aria-label="Start from a job" data-rise>
+              <button type="button" aria-pressed="true" data-mode="peak">Peak shaving</button>
+              <button type="button" aria-pressed="false" data-mode="solar">Store solar and wind</button>
+              <button type="button" aria-pressed="false" data-mode="ev">Fast EV charging</button>
+              <button type="button" aria-pressed="false" data-mode="backup">Backup power</button>
+            </div>
+            <div class="btm" id="btm" data-rise>
+              <p class="btm__label">At the meter</p>
+              <p class="btm__hero"><b data-btm="grid">200</b><span class="btm__unit">kW</span><span class="btm__dir" data-btm="dir">from the grid</span></p>
+              <div class="btm__gauge" aria-hidden="true"><span class="btm__fill" data-btm="fill"></span></div>
+              <p class="btm__scale"><span data-btm="state"></span><span>Limit 200 kW</span></p>
+              <div class="btm__batt">
+                <span class="btm__label">Battery</span>
+                <span class="btm__socbar" aria-hidden="true"><span data-btm="socbar"></span></span>
+                <span class="btm__soc"><b data-btm="soc">80</b>&nbsp;%</span>
+                <span class="btm__bstate" data-btm="bstate"></span>
+              </div>
+              <p class="btm__think" data-btm="think"></p>
+              <div class="btm__assets" data-btm="assets" role="group" aria-label="Change the site"></div>
+              <p class="btm__note">Tap anything on the site to change it. Example site, sped up 120 times.</p>
+            </div>
+            <p class="sr-only" aria-live="polite" data-btm="live"></p>
+          </div>
+        </section>
+      </div>
+
+      <!-- the live demo -->
+      <section class="solid peak" id="limit" aria-labelledby="h-limit">
+        <div class="wrap peak__grid">
+          <div class="peak__intro">
+            <h2 id="h-limit" data-split>Set the limit. The battery holds it.</h2>
+            <p data-rise>Peaks decide what you pay for and how much grid you need. Drag the amber line, or use the slider, and watch the battery shave the top of the day and refill in the valleys.</p>
+            <ol class="steps" data-rise>
+              <li><b>Analyze</b> Twelve months of data show your consumption, production and savings potential.</li>
+              <li><b>Optimize</b> One intelligent system balances the assets that use and produce energy.</li>
+              <li><b>Control</b> Battery storage, energy management and local market knowledge hold the line.</li>
+            </ol>
+          </div>
+          <div class="peak__chart" data-peak-chart>
+            <div class="instrument">
+              <dl class="kpis">
+                <div class="kpi"><dt>Grid peak</dt><dd><span class="kpi__v"><b data-k="after">442</b> kW</span><span class="kpi__s" data-k="before">was 442 kW</span></dd></div>
+                <div class="kpi"><dt>Peak cut</dt><dd><span class="kpi__v"><b data-k="cut">0</b> kW</span><span class="kpi__s" data-k="pct">nothing shaved yet</span></dd></div>
+                <div class="kpi"><dt>From the battery</dt><dd><span class="kpi__v"><b data-k="kwh">0</b> kWh</span><span class="kpi__s" data-k="kwhSub">idle all day</span></dd></div>
+                <div class="kpi"><dt>Lowest charge</dt><dd><span class="kpi__v"><b data-k="low">90</b>%</span><span class="kpi__s" data-k="lowAt">stays full</span></dd></div>
+              </dl>
+              <ul class="legend" aria-label="Legend">
+                <li><span class="key key--load" aria-hidden="true"></span>Site load</li>
+                <li><span class="key key--net" aria-hidden="true"></span>Grid draw with battery</li>
+                <li><span class="key key--dis" aria-hidden="true"></span>Battery discharging</li>
+                <li><span class="key key--chg" aria-hidden="true"></span>Battery charging</li>
+                <li><span class="key key--over" aria-hidden="true"></span>Over the limit</li>
+              </ul>
+              <div class="chart" data-chart>
+                <svg class="chart__svg" viewBox="0 0 880 520" role="img" aria-label="Example site over 24 hours: site load, grid draw with the battery holding a peak limit, and the battery charge. The same values are in the table below." data-chart-svg><g data-chart-inner></g></svg>
+                <div class="tip" data-tip hidden></div>
+              </div>
+              <div class="limit-control">
+                <label for="cap">Peak limit</label>
+                <div class="limit-control__track">
+                  <input class="range" id="cap" type="range" min="300" max="445" step="5" value="360" aria-describedby="peak-sentence" data-cap-input />
+                  <p class="held" data-held hidden><span>Held all day from <b>335 kW</b> up</span></p>
+                </div>
+                <output for="cap" data-cap-output>360&nbsp;kW</output>
+              </div>
+            </div>
+            <p class="peak__sentence" id="peak-sentence" data-sentence></p>
+            <p class="sr-only" aria-live="polite" data-sentence-live></p>
+            <p class="peak__note">Example site, 24 hours. Battery 200&nbsp;kW and 400&nbsp;kWh, 90&nbsp;% round trip, usable between 10 and 90&nbsp;% state of charge. Illustrative, not a customer.</p>
+            <details class="table-view"><summary>View as table</summary><div class="table-view__scroll"><table><caption class="sr-only">Hourly values for the example site</caption><thead><tr><th scope="col">Time</th><th scope="col">Site load kW</th><th scope="col">Grid draw kW</th><th scope="col">Battery kW</th><th scope="col">State of charge</th></tr></thead><tbody data-table></tbody></table></div></details>
+          </div>
+        </div>
+      </section>
+
+      <!-- packages -->
+      <section class="solid packages" id="packages" aria-labelledby="h-packages">
+        <div class="flowline" data-flowline="a" aria-hidden="true"></div>
+        <div class="wrap">
+          <div class="sec-head">
+            <h2 id="h-packages" data-split>Eight packages, one for you.</h2>
+            <p data-rise>Every organization’s energy challenge is different. Pick the one that matches yours.</p>
+          </div>
+          <div class="needs" role="group" aria-labelledby="needs-label">
+            <p class="needs__label" id="needs-label">What do you need?</p>
+            <div class="needs__chips">
+              <button type="button" class="chip" data-goal="all" aria-pressed="true">Show all</button>
+              <button type="button" class="chip" data-goal="bills" aria-pressed="false">Lower peaks and bills</button>
+              <button type="button" class="chip" data-goal="earn" aria-pressed="false">Earn from my battery</button>
+              <button type="button" class="chip" data-goal="charge" aria-pressed="false">Charge vehicles</button>
+              <button type="button" class="chip" data-goal="backup" aria-pressed="false">Stay on in an outage</button>
+              <button type="button" class="chip" data-goal="insight" aria-pressed="false">Understand my energy</button>
+            </div>
+            <p class="needs__count" aria-live="polite" data-pk-count>All eight packages</p>
+          </div>
+          <div class="pkx">
+            <ul class="pk" id="pkList"></ul>
+            <div class="pk-stage" id="pkStage"></div>
+          </div>
+          <div class="finder" data-rise>
+            <p class="finder__title">Not sure which one fits?</p>
+            <p>Answer a few questions about your site and get matched in about 60 seconds.</p>
+            <a class="btn btn--amber" href="https://www.sparqtechnology.com/package-finder"><span>Take the Package Finder</span><i aria-hidden="true">→</i></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- proof -->
+      <section class="solid proof" id="proof" aria-labelledby="h-proof">
+        <div class="flowline" data-flowline="b" aria-hidden="true"></div>
+        <div class="wrap">
+          <div class="sec-head">
+            <h2 id="h-proof" data-split>On site, across Europe.</h2>
+            <div class="sec-head__side">
+              <p data-rise>Headquarters in Gothenburg, offices in Paris and Milano, and Sparq systems at work on site. The latest from the field.</p>
+              <a class="arrow-link" href="/sparq-preview/news/" data-rise>All news <i aria-hidden="true">→</i></a>
+            </div>
+          </div>
+          <div class="field" id="field"></div>
+          <div class="together" id="together"></div>
+        </div>
+      </section>
+
+      <!-- roots -->
+      <section class="roots" aria-labelledby="h-roots">
+        <img class="roots__img" src="/sparq-preview/img/n-gothenburg.webp" alt="The port of Gothenburg at dawn, cranes in the mist" loading="lazy" width="2000" height="1500" />
+        <div class="roots__text wrap">
+          <div class="roots__head">
+            <p class="roots__kicker" data-rise>Part of the CEBON Group</p>
+            <h2 id="h-roots" data-split>Forty years, rooted in Gothenburg.</h2>
+            <p class="roots__lede" data-rise>CEBON was founded in Gothenburg in 1986 by three high school friends. More than forty years of battery experience stand behind every Sparq system. Your wish is our demand.</p>
+            <a class="arrow-link roots__more" href="/sparq-preview/about/" data-rise>Our story <i aria-hidden="true">→</i></a>
+          </div>
+          <dl class="roots__facts">
+            <div data-rise><dt>Founded in Gothenburg</dt><dd data-count="1986" data-count-from="1946">1986</dd></div>
+            <div data-rise><dt>Offices in Sweden, France and Italy</dt><dd data-count="3">3</dd></div>
+            <div data-rise><dt>Languages of support</dt><dd data-count="5">5</dd></div>
+            <div data-rise><dt>ISO 9001, 14001 and 45001, EN54 fire safety, CE marked</dt><dd>Certified</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- contact -->
+      <section class="contact" id="contact" aria-labelledby="h-contact">
+        <div class="flowline flowline--dark" data-flowline="dark" aria-hidden="true"></div>
+        <div class="wrap">
+          <div class="contact__grid">
+            <div class="contact__main">
+              <p class="hello" aria-hidden="true"><span class="hello__win"><span class="hello__word" data-hello>Hej.</span></span><span class="hello__lang" data-hello-lang>Swedish</span></p>
+              <h2 id="h-contact" data-split>Let us talk.</h2>
+              <p class="contact__lede" data-rise>Tell us about your site, your load profile or your goals. A Sparq engineer will get back to you, in Swedish, English, French, Italian or Dutch.</p>
+            </div>
+            <aside class="brief" aria-labelledby="brief-title" data-rise>
+              <p class="brief__title" id="brief-title">Helpful to include</p>
+              <ol class="brief__list">
+                <li>Your site and where it is</li>
+                <li>Your load profile or monthly peak, if you know it</li>
+                <li>What you want to achieve</li>
+              </ol>
+              <a class="btn btn--amber" data-mail-brief href="mailto:info@sparqtechnology.com"><span>Write to an engineer</span><i aria-hidden="true">→</i></a>
+            </aside>
+          </div>
+          <div class="contact__mailrow" data-rise>
+            <a class="contact__mail" href="mailto:info@sparqtechnology.com"><span>info@sparqtechnology.com</span></a>
+            <button class="copy" type="button" data-copy="info@sparqtechnology.com"><span data-copy-label>Copy address</span></button>
+            <span class="sr-only" aria-live="polite" data-copy-status></span>
+          </div>
+          <dl class="reach" data-rise>
+            <div><dt>Call</dt><dd><a href="tel:+46317991600">+46 (0)31-799 16 00</a></dd></div>
+            <div><dt>Gothenburg, local time</dt><dd><time data-clock>--:--</time></dd></div>
+            <div><dt>Follow</dt><dd><a href="https://www.linkedin.com/company/sparq-technology/" rel="noopener">LinkedIn</a><a href="https://www.youtube.com/@SparqTechnology" rel="noopener">YouTube</a></dd></div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <footer class="ftr">
+      <video class="ftr__video" muted loop playsinline preload="none" poster="/sparq-preview/img/footer-poster.webp" aria-hidden="true" tabindex="-1"></video>
+      <div class="ftr__inner wrap">
+        <div class="ftr__top">
+          <div class="ftr__about">
+            <p>Battery energy optimization and storage solutions for commercial and industrial applications. Made in EU.</p>
+            <p class="ftr__certs">ISO 9001 · ISO 14001 · ISO 45001 · EN54 · CE</p>
+          </div>
+          <nav class="ftr__nav" aria-label="Footer">
+            <div>
+              <p class="ftr__h">Company</p>
+              <a href="/sparq-preview/about/">About us</a>
+              <a href="/sparq-preview/references/">References</a>
+              <a href="/sparq-preview/partners/">Partners</a>
+              <a href="/sparq-preview/news/">News</a>
+            </div>
+            <div>
+              <p class="ftr__h">Offer</p>
+              <a href="/sparq-preview/solutions/">Solutions</a>
+              <a href="/sparq-preview/technology/">Technology</a>
+              <a href="/sparq-preview/packages/">Packages</a>
+              <a href="/sparq-preview/industries/">Industries</a>
+              <a href="/sparq-preview/glossary/">Glossary</a>
+            </div>
+            <div>
+              <p class="ftr__h">Contact</p>
+              <a href="mailto:info@sparqtechnology.com">info@sparqtechnology.com</a>
+              <a href="tel:+46317991600">+46 (0)31-799 16 00</a>
+              <a href="https://www.linkedin.com/company/sparq-technology/" rel="noopener">LinkedIn</a>
+              <a href="https://www.youtube.com/@SparqTechnology" rel="noopener">YouTube</a>
+            </div>
+          </nav>
+        </div>
+        <div class="ftr__name" data-logo="wordmark" aria-label="Sparq" role="img"></div>
+        <div class="ftr__bottom">
+          <p class="ftr__legal">© 2022 to 2026 Sparq Technology · Part of the CEBON Group · <a href="/sparq-preview/privacy/">Privacy policy</a></p>
+          <a class="ftr__up" href="#top">Back to top <i aria-hidden="true">↑</i></a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="labels" id="labels" aria-hidden="true"></div>
+    <button class="motion-toggle" type="button" aria-pressed="false" id="motionToggle">Pause motion</button>
+
+  </body>
+</html>
