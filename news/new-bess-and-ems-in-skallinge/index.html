@@ -22,9 +22,9 @@
       if (!matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.classList.add('motion'); setTimeout(function () { if (!document.documentElement.classList.contains('ready')) document.documentElement.classList.add('failsafe'); }, 3500); }
     </script>
     <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sparqtechnology.com/"}, {"@type": "ListItem", "position": 2, "name": "News", "item": "https://www.sparqtechnology.com/news/"}, {"@type": "ListItem", "position": 3, "name": "Sparq continues to deliver flexibility: new BESS and EMS in place in Skällinge", "item": "https://www.sparqtechnology.com/news/new-bess-and-ems-in-skallinge/"}]}, {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Sparq continues to deliver flexibility: new BESS and EMS in place in Skällinge", "datePublished": "23 September 2026", "publisher": {"@type": "Organization", "name": "Sparq Technology"}}]</script>
-    <script type="module" crossorigin src="/sparq-preview/assets/motion-proxy-Duum0M2j.js"></script>
-    <script type="module" crossorigin src="/sparq-preview/assets/inner-DgOxyZLO.js"></script>
-    <link rel="stylesheet" crossorigin href="/sparq-preview/assets/motion-proxy-CL9AbMOP.css">
+    <script type="module" crossorigin src="/sparq-preview/assets/motion-proxy-DwT6gIXJ.js"></script>
+    <script type="module" crossorigin src="/sparq-preview/assets/inner-BqGU7M5D.js"></script>
+    <link rel="stylesheet" crossorigin href="/sparq-preview/assets/motion-proxy-CEeOCyTc.css">
     <link rel="stylesheet" crossorigin href="/sparq-preview/assets/inner-BAiHFrUT.css">
   </head>
   <body class="inner" data-page="article">
@@ -68,21 +68,50 @@
       <button class="hdr__menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
     </header>
     <nav class="menu" id="menu" aria-label="Menu" hidden>
-      <div class="menu__list">
-        <a href="/sparq-preview/about/">About</a>
-        <a href="/sparq-preview/solutions/">Solutions</a>
-        <a href="/sparq-preview/packages/">Packages</a>
-        <a href="/sparq-preview/industries/">Industries</a>
-        <a href="/sparq-preview/technology/">Technology</a>
-        <a href="/sparq-preview/references/">References</a>
-        <a href="/sparq-preview/partners/">Partners</a>
-        <a href="/sparq-preview/news/" aria-current="true">News</a>
-        <a href="/sparq-preview/contact/">Contact</a>
-      </div>
-      <div class="menu__foot">
+      <ul class="menu__links">
+          <li class="menu__row"><a class="menu__a" href="/sparq-preview/about/">About</a></li>
+          <li class="menu__row"><a class="menu__a" href="/sparq-preview/solutions/">Solutions</a></li>
+          <li class="menu__row menu__row--sub">
+            <a class="menu__a" href="/sparq-preview/packages/">Packages</a>
+            <button class="menu__more" type="button" aria-expanded="false" aria-controls="menu-pk" aria-label="All packages"><i aria-hidden="true"></i></button>
+            <div class="menu__sub" id="menu-pk" inert><div class="menu__subin">
+            <div class="menu__pk">
+              <div class="menu__grp"><p class="menu__g">Plan &amp; Optimise</p><a class="menu__s" href="/sparq-preview/packages/analyzer/">Analyzer</a><a class="menu__s" href="/sparq-preview/packages/optimizer/">Optimizer</a></div>
+              <div class="menu__grp"><p class="menu__g">Store &amp; Save</p><a class="menu__s" href="/sparq-preview/packages/controller/">Controller</a><a class="menu__s" href="/sparq-preview/packages/capitalizer/">Capitalizer</a></div>
+              <div class="menu__grp"><p class="menu__g">Charge</p><a class="menu__s" href="/sparq-preview/packages/supercharger/">Supercharger</a><a class="menu__s" href="/sparq-preview/packages/mobilecharger/">Mobilecharger</a></div>
+              <div class="menu__grp"><p class="menu__g">Protect &amp; Endure</p><a class="menu__s" href="/sparq-preview/packages/stabilizer/">Stabilizer</a><a class="menu__s" href="/sparq-preview/packages/fortifier/">Fortifier</a></div>
+            </div>
+            </div></div>
+          </li>
+          <li class="menu__row menu__row--sub">
+            <a class="menu__a" href="/sparq-preview/industries/">Industries</a>
+            <button class="menu__more" type="button" aria-expanded="false" aria-controls="menu-ind" aria-label="All industries"><i aria-hidden="true"></i></button>
+            <div class="menu__sub" id="menu-ind" inert><div class="menu__subin">
+            <div class="menu__ind">
+              <a class="menu__s" href="/sparq-preview/industries/commercial-industrial/">Commercial &amp; industrial (C&amp;I)</a>
+              <a class="menu__s" href="/sparq-preview/industries/municipalities-cities/">Municipalities &amp; cities</a>
+              <a class="menu__s" href="/sparq-preview/industries/wind-solar-farm-operators/">Wind &amp; solar farm operators</a>
+              <a class="menu__s" href="/sparq-preview/industries/agriculture/">Agriculture</a>
+              <a class="menu__s" href="/sparq-preview/industries/ev-charging-providers-operators/">EV charging providers &amp; operators</a>
+              <a class="menu__s" href="/sparq-preview/industries/transport-logistics/">Transport &amp; logistics</a>
+              <a class="menu__s" href="/sparq-preview/industries/ports-marine/">Ports &amp; Marine</a>
+              <a class="menu__s" href="/sparq-preview/industries/construction-off-grid-worksites/">Construction &amp; off-grid worksites</a>
+              <a class="menu__s" href="/sparq-preview/industries/real-estate/">Real Estate &amp; Property</a>
+              <a class="menu__s" href="/sparq-preview/industries/data-centers/">Data centers</a>
+              <a class="menu__s" href="/sparq-preview/industries/large-events/">Large Events</a>
+            </div>
+            </div></div>
+          </li>
+          <li class="menu__row"><a class="menu__a" href="/sparq-preview/technology/">Technology</a></li>
+          <li class="menu__row"><a class="menu__a" href="/sparq-preview/references/">References</a></li>
+          <li class="menu__row"><a class="menu__a" href="/sparq-preview/partners/">Partners</a></li>
+          <li class="menu__row"><a class="menu__a" href="/sparq-preview/news/" aria-current="true">News</a></li>
+      </ul>
+      <a class="menu__cta" href="/sparq-preview/contact/">Let us talk</a>
+      <div class="menu__end">
         <a href="mailto:info@sparqtechnology.com">info@sparqtechnology.com</a>
         <a href="tel:+46317991600">+46 (0)31-799 16 00</a>
-        <button class="menu__motion" type="button" aria-pressed="false" data-motion-proxy>Pause motion</button>
+        <p class="menu__meta"><span>Gothenburg <time data-menu-clock></time></span><button class="menu__motion" type="button" aria-pressed="false" data-motion-proxy>Pause motion</button></p>
       </div>
     </nav>
 
